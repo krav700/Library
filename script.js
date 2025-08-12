@@ -53,17 +53,26 @@ function loadBooks() {
         if (book.read == true) {
             readBook.textContent = `✓ read`;
             readBook.classList.add("read");
-
+            
         }
         else if (book.read == false) {
             readBook.textContent = `X unread`;
             readBook.classList.add("unread");
-
+            
         }
-        else {
-            readBook.textContent = `whaat`;
-            readBook.classList.add("unread");
-        }
+        
+        readBook.addEventListener("click", () => {
+            readBook.classList.toggle("unread");
+            readBook.classList.toggle("read");
+            if (book.read == true) {
+                readBook.textContent = `X unread`;
+                book.read = false;
+            }
+            else {
+                readBook.textContent = `✓ read`;
+                book.read = true;
+            }
+        });
 
         card.appendChild(nameOfBook);
         card.appendChild(authorOfBook);
@@ -119,3 +128,4 @@ closeCard.forEach(closeButton => {
         closeButton.parentElement.parentElement.remove();
     });
 });
+

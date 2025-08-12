@@ -11,12 +11,6 @@
     margin: 0;
   }
   
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      interpolate-size: allow-keywords;
-    }
-  }
-  
   html, body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -111,11 +105,13 @@
 .read {
     justify-self: end;
     color: rgb(118, 255, 118);
+    cursor: pointer;
 }
 
 .unread {
     justify-self: end;
     color: rgb(255, 105, 105);
+    cursor: pointer;
 }
 
 form {
