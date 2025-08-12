@@ -6,8 +6,60 @@
     <title>Library</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <div class="main-content">
+        <h1 class="title">Library</h1>
+        <div class="cards">
+            
+        </div>
+        <div class="button-placement">
+            <button type="button" class="new-book">New Book</button>
+        </div>
+    </div>
+
+    <div class="dialog-window">
+        <dialog id="dialog">
+            <h4 id="dialog-close">X</h4>
+
+            <form method="dialog" action="script.js" id="new-book-form">
+                    
+                    <h1>New Book</h1>
+
+                    <p>
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" required>
+                    </p>
+                    <p>
+                        <label for="author">Author</label>
+                        <input type="text" id="author" name="author" required>
+                    </p>
+                    <p>
+                        <label for="pages">Number Of Pages</label>
+                        <input type="tel" id="pages" name="pages" required>
+                    </p>
+                    <p>
+                        <fieldset>
+                            <legend>Read:</legend>
+
+                            <label for="read">Yes</label>
+                            <input type="radio" id="read" name="read-check" value="true" required>
+
+                            <label for="unread">No</label>
+                            <input type="radio" id="unread" name="read-check" value="false" required>
+                        </fieldset>
+                    </p>
+
+
+                    <div class="button-placement">
+                        <button class="new-book-added" type="submit">Done!</button>
+                    </div>
+            </form>
+        </dialog>
+    </div>
 </body>
 </html>
