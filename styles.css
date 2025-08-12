@@ -148,7 +148,7 @@ dialog {
 }
 
 ::backdrop {
-    background-color: aliceblue;
+    background: linear-gradient(var(--card-bg-color) 40% , var(--card-border-color));
     opacity: 0.75;
 }
 
