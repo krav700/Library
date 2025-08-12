@@ -16,6 +16,7 @@
     -webkit-font-smoothing: antialiased;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height: 100%;
+    background: linear-gradient(var(--card-border-color) 60%, var(--card-bg-color));
   }
   
   img, picture, video, canvas, svg {

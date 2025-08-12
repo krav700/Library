@@ -106,10 +106,10 @@ const dialog = document.querySelector("dialog");
 const addBook = document.querySelector(".new-book-added");
 
 const closeDialog = document.querySelector("#dialog-close");
+const form = document.querySelector("#new-book-form");
 
 newBook.addEventListener("click", () => {
     dialog.showModal();    
-    const form = document.querySelector("#new-book-form");
     form.reset();
 });
 
@@ -117,7 +117,7 @@ closeDialog.addEventListener("click", () => {
     dialog.close();    
 });
 
-addBook.addEventListener("click", () =>{
+form.addEventListener("submit", () =>{
     const formData = Array.from(document.querySelector("#new-book-form"))
   .filter(input => !(input.type === "radio" && !input.checked)) // махаме не-избраните радио бутони
   .reduce((acc, input) => ({ ...acc, [input.id || input.name]: input.value }), {});
