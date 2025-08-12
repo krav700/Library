@@ -84,6 +84,21 @@ function loadBooks() {
         cards.appendChild(card);
 
     });
+
+    const closeCard = document.querySelectorAll(".close-book");
+
+    closeCard.forEach(closeButton => {
+        closeButton.addEventListener("click", () => {
+            myLibrary.forEach(book => {
+                if (book.name == closeButton.parentElement.textContent.slice(0,-3)) {
+                    const index = myLibrary.indexOf(book.title == closeButton.parentElement.textContent);
+                    myLibrary.splice(index, 1);
+                }
+            });
+            closeButton.parentElement.parentElement.remove();
+        });
+    });
+
 }
 
 const newBook = document.querySelector(".new-book");
@@ -114,18 +129,3 @@ addBook.addEventListener("click", () =>{
     
     loadBooks();
 });
-
-const closeCard = document.querySelectorAll(".close-book");
-
-closeCard.forEach(closeButton => {
-    closeButton.addEventListener("click", () => {
-        myLibrary.forEach(book => {
-            if (book.name == closeButton.parentElement.textContent.slice(0,-3)) {
-                const index = myLibrary.indexOf(book.title == closeButton.parentElement.textContent);
-                myLibrary.splice(index, 1);
-            }
-        });
-        closeButton.parentElement.parentElement.remove();
-    });
-});
-
