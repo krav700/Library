@@ -72,6 +72,14 @@
     border-radius: 15px;
     padding: 1rem;
     color: #FFF;
+    box-shadow: 0px 2px 3px black;
+    transition: 500ms;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: 500ms;
+    box-shadow: 0px 2px 7px black;
 }
 
 .title {
@@ -92,6 +100,10 @@
     font-size: clamp(1rem, 2vw , 3rem);
     text-align: center;
     margin: 2rem;
+}
+
+.new-book {
+    border: 3px solid #FFF;
 }
 
 .button-placement {
